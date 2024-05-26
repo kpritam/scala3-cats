@@ -1,0 +1,7 @@
+GET http://localhost:8080/greet/jimmy
+
+###
+GET http://localhost:8080/api/tweets/1
+
+###
+GET http://localhost:8080/api/tweets/popular
