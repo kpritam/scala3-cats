@@ -5,3 +5,12 @@ GET http://localhost:8080/api/tweets/1
 
 ###
 GET http://localhost:8080/api/tweets/popular
+
+###
+POST http://localhost:8080/api/tweets
+content-type: application/json
+
+{
+    "id": 5,
+    "message": "Tweet 5"
+}

@@ -26,8 +26,7 @@ object Server extends IOApp:
 
   override def run(args: List[String]): IO[ExitCode] =
     for
-      tweets <- Ref.of[IO, Seq[Tweet]](tweets)
-      tweetService <- IO.pure(new TweetServiceInMem(tweets))
+      tweetService <- TweetService.make(tweets)
       router <- IO.pure(
         Router(
           "/" -> greetingService,
