@@ -6,6 +6,8 @@ object Dependencies {
   lazy val kittens = "org.typelevel" %% "kittens" % "3.3.0"
 
   lazy val fs2 = "co.fs2" %% "fs2-core" % "3.10.2"
+  
+  lazy val logback = "ch.qos.logback" % "logback-classic" % "1.2.13"
 }
 
 object Http4s {
@@ -27,7 +29,6 @@ object Log4Cats {
   val all = Seq(core, slf4j)
 }
 
-
 object Circe {
   val version = "0.14.6"
 
@@ -37,4 +38,11 @@ object Circe {
   val literal = "io.circe" %% "circe-literal" % version
 
   val all = Seq(core, http4sCirce, generic, literal)
+}
+
+object Akka {
+  val version = "2.9.3"
+  val actor = "com.typesafe.akka" %% "akka-actor-typed" % version
+
+  val all = Seq(actor)
 }
